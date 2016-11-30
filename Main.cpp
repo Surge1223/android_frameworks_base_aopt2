@@ -35,18 +35,18 @@ extern int diff(const std::vector<StringPiece>& args);
 
 static void printCommandsAndDie() {
     std::cerr << "================================================= " << std::endl << std::endl;
-    std::cerr << "	Android Overlay Packaging Tool v2               " << std::endl << std::endl;
-	std::cerr << "================================================= " << std::endl << std::endl;
-	std::cerr << " No arguments provided 			       	        " << std::endl << std::endl;
-    std::cerr << " The following commands are supported:   		    " << std::endl << std::endl;
+    std::cerr << "	Android Overlay Packaging Tool v2           " << std::endl << std::endl;
+    std::cerr << "=================================================  " << std::endl << std::endl;
+    std::cerr << " No arguments provided                             " << std::endl << std::endl;
+    std::cerr << " The following commands are supported:             " << std::endl << std::endl;
     std::cerr << std::endl;
     std::cerr << "c   compile   compiles a subset of resources      " << std::endl;
     std::cerr << "l   link      links compiled resources and libs   " << std::endl;
     std::cerr << "df  diff      diff of two apk files specifyc dump " << std::endl;
     std::cerr << "d   dump      dumps resource contents to stdout   " << std::endl;
-	std::cerr << std::endl;
-	std::cerr << "run aopt2 with arg and -h flag for extra details  " << std::endl;
-	exit(1);
+    std::cerr << std::endl;
+    std::cerr << "run aopt2 with arg and -h flag for extra details  " << std::endl;
+    exit(1);
 }
 int main(int argc, char** argv) {
     if (argc >= 2) {
