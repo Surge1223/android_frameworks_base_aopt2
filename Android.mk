@@ -192,6 +192,44 @@ aopt_includes := \
         external/protobuf/src \
         external/protobuf/android 
         
+hostLdLibs := -lm -lc -lgcc -ldl -lz 
+
+hostStaticLibs := \
+	libandroidfw \
+    libpng \
+    liblog \
+    libexpat \
+    libutils \
+    libcutils \
+    libziparchive-host \
+    libbase \
+	libprotobuf-cpp-lite_static
+	
+
+cFlags := \
+	-Wall \
+	-Werror \
+	-Wno-unused-parameter \
+	-D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARIANT)"' \
+	-Wno-format-y2k \
+	-Wno-unused-variable \
+	-Wno-unused-parameter \
+	-Wno-maybe-uninitialized
+
+
+cFlags_darwin := -D_DARWIN_UNLIMITED_STREAMS
+cFlags_windows := -Wno-maybe-uninitialized # Incorrectly marking use of Maybe.value() as error.
+cppFlags := -Wno-missing-field-initializers -fno-exceptions -fno-rtti
+
+# Statically link libz for MinGW (Win SDK under Linux),
+# and dynamically link for all others.
+hostStaticLibs_windows := libz
+hostLdLibs_linux := -lz
+hostLdLibs_darwin := -lz
+host_protoIncludes := $(call generated-sources-dir-for,STATIC_LIBRARIES,libaopt2,HOST)
+
+FIND_HOSTOS := $(shell uname -s)
+HOST_NAME := $(shell echo $(FIND_HOSTOS) |sed -e s/L/l/ |sed -e s/D/d/ |sed s/W/w/ )
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libprotobuf-cpp-lite_arm
@@ -380,6 +418,7 @@ LOCAL_MODULE := libaopt2
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 LOCAL_CPPFLAGS := $(aopt_cxxflags)
 
+LOCAL_CFLAGS := -D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARIANT)"'
 LOCAL_C_INCLUDES := \
 	$(aopt_includes) \
 	$(protoIncludes)
@@ -403,6 +442,7 @@ LOCAL_STATIC_LIBRARIES := libaopt2 $(aopt_staticlibs)
 LOCAL_LDLIBS := $(aopt_ldlibs)
 LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_UNSTRIPPED_PATH := $(PRODUCT_OUT)/symbols/utilities
+LOCAL_CFLAGS := -D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARIANT)"'
 LOCAL_LDFLAGS := -static
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_PACK_MODULE_RELOCATIONS := false
@@ -423,4 +463,65 @@ LOCAL_MULTILIB := both
 
 include $(BUILD_EXECUTABLE)
 
-#include $(call first-makefiles-under,$(LOCAL_PATH))
+# ==========================================================
+# NOTE: Do not add any shared libraries.
+# AOPT2 is built to run on many environments
+# that may not have the required dependencies.
+# ==========================================================
+
+# ==========================================================
+# Build the host static library: libaopt2
+# ==========================================================
+include $(CLEAR_VARS)
+LOCAL_MODULE := libaopt2
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_HOST_OS := $(HOST_NAME)
+LOCAL_CFLAGS := $(cFlags)
+LOCAL_CFLAGS_darwin := $(cFlags_darwin)
+LOCAL_CFLAGS_windows := $(cFlags_windows)
+LOCAL_CPPFLAGS := $(cppFlags)
+LOCAL_C_INCLUDES := $(aopt_includes) $(host_protoIncludes)
+LOCAL_SRC_FILES := $(sources)
+LOCAL_STATIC_LIBRARIES := $(hostStaticLibs)
+LOCAL_STATIC_LIBRARIES_windows := $(hostStaticLibs_windows)
+include $(BUILD_HOST_STATIC_LIBRARY)
+
+# ==========================================================
+# Build the host tests: libaopt2_tests
+# ==========================================================
+include $(CLEAR_VARS)
+LOCAL_MODULE := libaopt2_tests
+LOCAL_MODULE_TAGS := tests
+LOCAL_MODULE_HOST_OS := $(HOST_NAME)
+LOCAL_CFLAGS := $(cFlags)
+LOCAL_CFLAGS_darwin := $(cFlags_darwin)
+LOCAL_CFLAGS_windows := $(cFlags_windows)
+LOCAL_CPPFLAGS := $(cppFlags)
+LOCAL_C_INCLUDES := $(aopt_includes) $(host_protoIncludes)
+LOCAL_SRC_FILES := $(testSources)
+LOCAL_STATIC_LIBRARIES := libaopt2 $(hostStaticLibs)
+LOCAL_STATIC_LIBRARIES_windows := $(hostStaticLibs_windows)
+LOCAL_LDLIBS := $(hostLdLibs)
+LOCAL_LDLIBS_darwin := $(hostLdLibs_darwin)
+LOCAL_LDLIBS_linux := $(hostLdLibs_linux)
+include $(BUILD_HOST_NATIVE_TEST)
+
+# ==========================================================
+# Build the host executable: aopt2
+# ==========================================================
+include $(CLEAR_VARS)
+LOCAL_MODULE := aopt2
+LOCAL_MODULE_HOST_OS := $(HOST_NAME)
+LOCAL_CFLAGS := $(cFlags)
+LOCAL_CFLAGS_darwin := $(cFlags_darwin)
+LOCAL_CFLAGS_windows := $(cFlags_windows)
+LOCAL_CPPFLAGS := $(cppFlags)
+LOCAL_C_INCLUDES := $(aopt_includes) $(host_protoIncludes)
+LOCAL_SRC_FILES := $(main) $(toolSources)
+LOCAL_STATIC_LIBRARIES := libaopt2 $(hostStaticLibs)
+LOCAL_STATIC_LIBRARIES_windows := $(hostStaticLibs_windows)
+LOCAL_LDLIBS := $(hostLdLibs)
+LOCAL_LDLIBS_darwin := $(hostLdLibs_darwin)
+LOCAL_LDLIBS_linux := $(hostLdLibs_linux)
+LOCAL_FORCE_STATIC_EXECUTABLE := true
+include $(BUILD_HOST_EXECUTABLE)
