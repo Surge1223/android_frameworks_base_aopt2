@@ -51,6 +51,7 @@ enum class ResourceType {
     kLayout,
     kMenu,
     kMipmap,
+    kOverlay,
     kPlurals,
     kRaw,
     kString,

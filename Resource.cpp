@@ -40,6 +40,7 @@ StringPiece16 toString(ResourceType type) {
         case ResourceType::kLayout:        return u"layout";
         case ResourceType::kMenu:          return u"menu";
         case ResourceType::kMipmap:        return u"mipmap";
+        case ResourceType::kOverlay:       return u"overlay";
         case ResourceType::kPlurals:       return u"plurals";
         case ResourceType::kRaw:           return u"raw";
         case ResourceType::kString:        return u"string";
@@ -68,6 +69,7 @@ static const std::map<StringPiece16, ResourceType> sResourceTypeMap {
         { u"layout", ResourceType::kLayout },
         { u"menu", ResourceType::kMenu },
         { u"mipmap", ResourceType::kMipmap },
+        { u"overlay", ResourceType::kOverlay },
         { u"plurals", ResourceType::kPlurals },
         { u"raw", ResourceType::kRaw },
         { u"string", ResourceType::kString },
