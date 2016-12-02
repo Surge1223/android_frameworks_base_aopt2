@@ -33,7 +33,7 @@ extern int diff(const std::vector<StringPiece>& args);
 
 } // namespace aapt
 
-static void printCommandsAndDie() {
+static void printCommands() {
     std::cerr << "================================================= " << std::endl << std::endl;
     std::cerr << "	Android Overlay Packaging Tool v2           " << std::endl << std::endl;
     std::cerr << "=================================================  " << std::endl << std::endl;
@@ -46,7 +46,7 @@ static void printCommandsAndDie() {
     std::cerr << "d   dump      dumps resource contents to stdout   " << std::endl;
     std::cerr << std::endl;
     std::cerr << "run aopt2 with arg and -h flag for extra details  " << std::endl;
-    exit(1);
+    std::cerr << std::endl;
 }
 int main(int argc, char** argv) {
     if (argc >= 2) {
@@ -67,15 +67,18 @@ int main(int argc, char** argv) {
             return aapt::dump(args);
 	} else if (command == "diff" || command == "df") {
             return aapt::diff(args);
-	} else if (command == "v" || command == "version" || command == "--v") {
+	    } else if (command == "v" || command == "version" || command == "-v") {
 		std::cout << aapt::kAaptVersionStr << std::endl;
-		return 1;
+            exit(0);
+    	} else if (command == "-h" || command == "--help") {
+			printCommands();
         }
+        printCommands();
         std::cerr << "unknown command '" << command << "'\n";
     } else {
+        printCommands();
         std::cerr << "no command specified\n";
     }
 
-    printCommandsAndDie();
     return 1;
 }
