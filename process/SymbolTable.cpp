@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
-#include "Resource.h"
-#include "ValueVisitor.h"
+#include <ConfigDescription.h>
+#include <Resource.h>
+#include <ValueVisitor.h>
 #include "process/SymbolTable.h"
 #include "util/Util.h"
 

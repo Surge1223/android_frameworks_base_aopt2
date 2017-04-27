@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ResourceUtils.h"
+#include <ResourceUtils.h>
 #include "link/ManifestFixer.h"
 #include "util/Util.h"
 #include "xml/XmlActionExecutor.h"

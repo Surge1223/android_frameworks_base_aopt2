@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-#include "Flags.h"
-#include "ResourceTable.h"
+#include <Flags.h>
+#include <ResourceTable.h>
 #include "io/ZipArchive.h"
 #include "process/IResourceTableConsumer.h"
 #include "process/SymbolTable.h"
 #include "unflatten/BinaryResourceParser.h"
 
 #include <android-base/macros.h>
+#include <Main.h>
 
 namespace aapt {
 

@@ -17,7 +17,7 @@
 #ifndef AAPT_TEST_CONTEXT_H
 #define AAPT_TEST_CONTEXT_H
 
-#include "NameMangler.h"
+#include <NameMangler.h>
 #include "util/Util.h"
 
 #include "process/IResourceTableConsumer.h"

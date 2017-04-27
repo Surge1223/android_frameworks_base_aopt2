@@ -17,7 +17,7 @@
 #ifndef AAPT_XML_XMLUTIL_H
 #define AAPT_XML_XMLUTIL_H
 
-#include "ResourceValues.h"
+#include <ResourceValues.h>
 #include "util/Maybe.h"
 
 #include <string>

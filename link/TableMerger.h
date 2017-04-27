@@ -17,9 +17,9 @@
 #ifndef AAPT_TABLEMERGER_H
 #define AAPT_TABLEMERGER_H
 
-#include "Resource.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <Resource.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "filter/ConfigFilter.h"
 #include "io/File.h"
 #include "process/IResourceTableConsumer.h"

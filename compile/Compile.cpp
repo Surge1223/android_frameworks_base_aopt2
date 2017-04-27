@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
-#include "Diagnostics.h"
-#include "Flags.h"
-#include "ResourceParser.h"
-#include "ResourceTable.h"
+#include <ConfigDescription.h>
+#include <Diagnostics.h>
+#include <Flags.h>
+#include <ResourceParser.h>
+#include <ResourceTable.h>
 #include "compile/IdAssigner.h"
 #include "compile/Png.h"
 #include "compile/PseudolocaleGenerator.h"
@@ -38,6 +38,8 @@
 #include <dirent.h>
 #include <fstream>
 #include <string>
+#include <Main.h>
+
 
 namespace aapt {
 

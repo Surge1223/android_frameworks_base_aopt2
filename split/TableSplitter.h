@@ -17,8 +17,8 @@
 #ifndef AAPT_SPLIT_TABLESPLITTER_H
 #define AAPT_SPLIT_TABLESPLITTER_H
 
-#include "ConfigDescription.h"
-#include "ResourceTable.h"
+#include <ConfigDescription.h>
+#include <ResourceTable.h>
 #include "filter/ConfigFilter.h"
 #include "process/IResourceTableConsumer.h"
 

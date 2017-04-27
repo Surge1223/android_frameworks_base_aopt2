@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "Debug.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <Debug.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "util/Util.h"
-#include "ValueVisitor.h"
+#include <ValueVisitor.h>
 
 #include <algorithm>
 #include <iostream>

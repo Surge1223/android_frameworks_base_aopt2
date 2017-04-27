@@ -17,9 +17,9 @@
 #ifndef AAPT_BINARY_RESOURCE_PARSER_H
 #define AAPT_BINARY_RESOURCE_PARSER_H
 
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "Source.h"
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <Source.h>
 
 #include "process/IResourceTableConsumer.h"
 #include "util/Util.h"

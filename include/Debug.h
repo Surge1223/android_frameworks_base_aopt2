@@ -17,8 +17,8 @@
 #ifndef AAPT_DEBUG_H
 #define AAPT_DEBUG_H
 
-#include "Resource.h"
-#include "ResourceTable.h"
+#include <Resource.h>
+#include <ResourceTable.h>
 
 // Include for printf-like debugging.
 #include <iostream>

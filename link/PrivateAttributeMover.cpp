@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
+#include <ResourceTable.h>
 #include "link/Linkers.h"
 
 #include <algorithm>

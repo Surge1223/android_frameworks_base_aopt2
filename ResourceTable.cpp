@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
-#include "NameMangler.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ConfigDescription.h>
+#include <NameMangler.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "util/Util.h"
 
 #include <algorithm>

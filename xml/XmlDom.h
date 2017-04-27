@@ -17,9 +17,9 @@
 #ifndef AAPT_XML_DOM_H
 #define AAPT_XML_DOM_H
 
-#include "Diagnostics.h"
-#include "Resource.h"
-#include "ResourceValues.h"
+#include <Diagnostics.h>
+#include <Resource.h>
+#include <ResourceValues.h>
 #include "util/StringPiece.h"
 #include "util/Util.h"
 #include "xml/XmlUtil.h"

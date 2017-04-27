@@ -18,8 +18,8 @@
 #define AAPT_PNG_H
 
 #include "util/BigBuffer.h"
-#include "Diagnostics.h"
-#include "Source.h"
+#include <Diagnostics.h>
+#include <Source.h>
 
 #include <iostream>
 #include <string>

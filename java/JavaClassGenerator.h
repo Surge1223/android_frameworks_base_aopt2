@@ -17,8 +17,8 @@
 #ifndef AAPT_JAVA_CLASS_GENERATOR_H
 #define AAPT_JAVA_CLASS_GENERATOR_H
 
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "process/IResourceTableConsumer.h"
 #include "util/StringPiece.h"
 

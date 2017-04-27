@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-#include "Diagnostics.h"
+#include <Diagnostics.h>
 #include "ReferenceLinker.h"
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "link/Linkers.h"
 #include "process/IResourceTableConsumer.h"
 #include "process/SymbolTable.h"

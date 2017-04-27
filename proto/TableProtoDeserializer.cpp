@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ValueVisitor.h>
 #include "proto/ProtoHelpers.h"
 #include "proto/ProtoSerialize.h"
 

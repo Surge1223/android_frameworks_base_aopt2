@@ -17,7 +17,7 @@
 #ifndef AAPT_FILTER_CONFIGFILTER_H
 #define AAPT_FILTER_CONFIGFILTER_H
 
-#include "ConfigDescription.h"
+#include <ConfigDescription.h>
 
 #include <set>
 #include <utility>

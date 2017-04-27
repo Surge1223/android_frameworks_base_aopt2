@@ -17,9 +17,9 @@
 #ifndef AAPT_RESOURCE_VALUES_H
 #define AAPT_RESOURCE_VALUES_H
 
-#include "Diagnostics.h"
-#include "Resource.h"
-#include "StringPool.h"
+#include <Diagnostics.h>
+#include <Resource.h>
+#include <StringPool.h>
 #include "io/File.h"
 #include "util/Maybe.h"
 

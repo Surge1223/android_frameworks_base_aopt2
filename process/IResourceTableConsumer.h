@@ -17,11 +17,11 @@
 #ifndef AAPT_PROCESS_IRESOURCETABLECONSUMER_H
 #define AAPT_PROCESS_IRESOURCETABLECONSUMER_H
 
-#include "Diagnostics.h"
-#include "NameMangler.h"
-#include "Resource.h"
-#include "ResourceValues.h"
-#include "Source.h"
+#include <Diagnostics.h>
+#include <NameMangler.h>
+#include <Resource.h>
+#include <ResourceValues.h>
+#include <Source.h>
 
 #include <iostream>
 #include <list>

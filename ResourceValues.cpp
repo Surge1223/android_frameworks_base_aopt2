@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "Resource.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <Resource.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "io/File.h"
 #include "util/Util.h"
 

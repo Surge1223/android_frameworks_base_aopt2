@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "Resource.h"
-#include "ResourceTable.h"
-#include "StringPool.h"
-#include "ValueVisitor.h"
+#include <Resource.h>
+#include <ResourceTable.h>
+#include <StringPool.h>
+#include <ValueVisitor.h>
 #include "proto/ProtoHelpers.h"
 #include "proto/ProtoSerialize.h"
 #include "util/BigBuffer.h"

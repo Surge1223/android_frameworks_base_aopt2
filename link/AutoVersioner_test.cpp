@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
+#include <ConfigDescription.h>
 #include "link/Linkers.h"
 #include "test/Builders.h"
 #include "test/Context.h"

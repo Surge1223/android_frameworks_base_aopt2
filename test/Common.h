@@ -17,11 +17,11 @@
 #ifndef AAPT_TEST_COMMON_H
 #define AAPT_TEST_COMMON_H
 
-#include "ConfigDescription.h"
-#include "Debug.h"
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ValueVisitor.h"
+#include <ConfigDescription.h>
+#include <Debug.h>
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ValueVisitor.h>
 #include "io/File.h"
 #include "process/IResourceTableConsumer.h"
 #include "util/StringPiece.h"

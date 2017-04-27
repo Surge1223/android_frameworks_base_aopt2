@@ -17,8 +17,8 @@
 #ifndef AAPT_RESOURCE_H
 #define AAPT_RESOURCE_H
 
-#include "ConfigDescription.h"
-#include "Source.h"
+#include <ConfigDescription.h>
+#include <Source.h>
 
 #include "util/StringPiece.h"
 

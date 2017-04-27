@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "SdkConstants.h"
+#include <SdkConstants.h>
 
 #include <gtest/gtest.h>
 

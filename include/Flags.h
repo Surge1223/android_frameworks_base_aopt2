@@ -29,16 +29,22 @@ namespace aapt {
 
 class Flags {
 public:
+
     Flags& requiredFlag(const StringPiece& name, const StringPiece& description,
                         std::string* value);
     Flags& requiredFlagList(const StringPiece& name, const StringPiece& description,
                             std::vector<std::string>* value);
     Flags& optionalFlag(const StringPiece& name, const StringPiece& description,
                         Maybe<std::string>* value);
+    Flags& optionalFlag(const StringPiece& name, const StringPiece& description,
+                    std::function<void(const StringPiece&)> action);
+
     Flags& optionalFlagList(const StringPiece& name, const StringPiece& description,
                             std::vector<std::string>* value);
     Flags& optionalSwitch(const StringPiece& name, const StringPiece& description,
                           bool* value);
+    Flags& optionalSwitch(const StringPiece& name, const StringPiece& description, bool resultWhenSet,
+                        bool* result);
 
     void usage(const StringPiece& command, std::ostream* out);
 

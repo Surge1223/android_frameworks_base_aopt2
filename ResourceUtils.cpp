@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include "NameMangler.h"
-#include "ResourceUtils.h"
+#include <NameMangler.h>
+#include <ResourceUtils.h>
 #include "flatten/ResourceTypeExtensions.h"
 #include "util/Files.h"
 #include "util/Util.h"

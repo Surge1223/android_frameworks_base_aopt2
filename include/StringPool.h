@@ -18,7 +18,7 @@
 #define AAPT_STRING_POOL_H
 
 #include "util/BigBuffer.h"
-#include "ConfigDescription.h"
+#include <ConfigDescription.h>
 #include "util/StringPiece.h"
 
 #include <functional>

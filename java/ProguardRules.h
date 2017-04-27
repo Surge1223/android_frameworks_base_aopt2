@@ -17,8 +17,8 @@
 #ifndef AAPT_PROGUARD_RULES_H
 #define AAPT_PROGUARD_RULES_H
 
-#include "Resource.h"
-#include "Source.h"
+#include <Resource.h>
+#include <Source.h>
 #include "xml/XmlDom.h"
 
 #include <map>

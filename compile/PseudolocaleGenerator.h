@@ -17,7 +17,7 @@
 #ifndef AAPT_COMPILE_PSEUDOLOCALEGENERATOR_H
 #define AAPT_COMPILE_PSEUDOLOCALEGENERATOR_H
 
-#include "StringPool.h"
+#include <StringPool.h>
 #include "compile/Pseudolocalizer.h"
 #include "process/IResourceTableConsumer.h"
 

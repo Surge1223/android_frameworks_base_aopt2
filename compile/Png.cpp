@@ -16,7 +16,7 @@
 
 #include "util/BigBuffer.h"
 #include "Png.h"
-#include "Source.h"
+#include <Source.h>
 #include "util/Util.h"
 
 #include <androidfw/ResourceTypes.h>

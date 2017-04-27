@@ -17,7 +17,7 @@
 #ifndef AAPT_LINKER_LINKERS_H
 #define AAPT_LINKER_LINKERS_H
 
-#include "Resource.h"
+#include <Resource.h>
 #include "process/IResourceTableConsumer.h"
 #include "xml/XmlDom.h"
 

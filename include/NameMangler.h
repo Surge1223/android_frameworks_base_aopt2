@@ -17,7 +17,7 @@
 #ifndef AAPT_NAME_MANGLER_H
 #define AAPT_NAME_MANGLER_H
 
-#include "Resource.h"
+#include <Resource.h>
 
 #include "util/Maybe.h"
 

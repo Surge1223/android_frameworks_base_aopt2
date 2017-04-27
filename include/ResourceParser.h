@@ -17,11 +17,11 @@
 #ifndef AAPT_RESOURCE_PARSER_H
 #define AAPT_RESOURCE_PARSER_H
 
-#include "ConfigDescription.h"
-#include "Diagnostics.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "StringPool.h"
+#include <ConfigDescription.h>
+#include <Diagnostics.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <StringPool.h>
 #include "util/Maybe.h"
 #include "util/StringPiece.h"
 #include "xml/XmlPullParser.h"

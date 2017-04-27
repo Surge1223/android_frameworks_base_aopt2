@@ -17,8 +17,8 @@
 #ifndef AAPT_COMPILE_PSEUDOLOCALIZE_H
 #define AAPT_COMPILE_PSEUDOLOCALIZE_H
 
-#include "ResourceValues.h"
-#include "StringPool.h"
+#include <ResourceValues.h>
+#include <StringPool.h>
 #include "util/StringPiece.h"
 
 #include <android-base/macros.h>

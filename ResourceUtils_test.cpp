@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include "Resource.h"
-#include "ResourceUtils.h"
+#include <Resource.h>
+#include <ResourceUtils.h>
 #include "test/Builders.h"
 #include "test/Common.h"
 

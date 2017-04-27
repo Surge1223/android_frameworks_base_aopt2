@@ -17,7 +17,7 @@
 #ifndef AAPT_SDK_CONSTANTS_H
 #define AAPT_SDK_CONSTANTS_H
 
-#include "Resource.h"
+#include <Resource.h>
 
 namespace aapt {
 

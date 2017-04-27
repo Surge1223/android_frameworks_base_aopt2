@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "StringPool.h"
+#include <StringPool.h>
 #include "util/BigBuffer.h"
 #include "util/StringPiece.h"
 #include "util/Util.h"

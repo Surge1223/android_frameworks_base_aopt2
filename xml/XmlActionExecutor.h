@@ -17,7 +17,7 @@
 #ifndef AAPT_XML_XMLPATTERN_H
 #define AAPT_XML_XMLPATTERN_H
 
-#include "Diagnostics.h"
+#include <Diagnostics.h>
 #include "xml/XmlDom.h"
 
 #include <android-base/macros.h>

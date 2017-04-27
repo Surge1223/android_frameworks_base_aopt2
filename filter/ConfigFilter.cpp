@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
+#include <ConfigDescription.h>
 #include "filter/ConfigFilter.h"
 
 #include <androidfw/ResourceTypes.h>

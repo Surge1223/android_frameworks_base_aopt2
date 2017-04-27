@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "NameMangler.h"
+#include <NameMangler.h>
 
 #include <gtest/gtest.h>
 #include <string>

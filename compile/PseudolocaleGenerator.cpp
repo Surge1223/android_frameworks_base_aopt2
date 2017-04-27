@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "compile/PseudolocaleGenerator.h"
 #include "compile/Pseudolocalizer.h"
 

@@ -17,7 +17,7 @@
 #ifndef AAPT_XML_PULL_PARSER_H
 #define AAPT_XML_PULL_PARSER_H
 
-#include "Resource.h"
+#include <Resource.h>
 #include "process/IResourceTableConsumer.h"
 #include "util/Maybe.h"
 #include "util/StringPiece.h"

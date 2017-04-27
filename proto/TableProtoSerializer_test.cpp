@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
+#include <ResourceTable.h>
 #include "proto/ProtoSerialize.h"
 #include "test/Builders.h"
 #include "test/Common.h"

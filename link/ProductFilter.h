@@ -17,7 +17,7 @@
 #ifndef AAPT_LINK_PRODUCTFILTER_H
 #define AAPT_LINK_PRODUCTFILTER_H
 
-#include "ResourceTable.h"
+#include <ResourceTable.h>
 #include "process/IResourceTableConsumer.h"
 
 #include <android-base/macros.h>

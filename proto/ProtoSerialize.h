@@ -17,9 +17,9 @@
 #ifndef AAPT_FLATTEN_TABLEPROTOSERIALIZER_H
 #define AAPT_FLATTEN_TABLEPROTOSERIALIZER_H
 
-#include "Diagnostics.h"
-#include "ResourceTable.h"
-#include "Source.h"
+#include <Diagnostics.h>
+#include <ResourceTable.h>
+#include <Source.h>
 #include "proto/ProtoHelpers.h"
 
 #include <android-base/macros.h>

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
-#include "ResourceTable.h"
+#include <ConfigDescription.h>
+#include <ResourceTable.h>
 #include "split/TableSplitter.h"
 
 #include <algorithm>

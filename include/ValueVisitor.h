@@ -17,8 +17,8 @@
 #ifndef AAPT_VALUE_VISITOR_H
 #define AAPT_VALUE_VISITOR_H
 
-#include "ResourceValues.h"
-#include "ResourceTable.h"
+#include <ResourceValues.h>
+#include <ResourceTable.h>
 
 namespace aapt {
 

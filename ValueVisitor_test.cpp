@@ -17,9 +17,9 @@
 #include <gtest/gtest.h>
 #include <string>
 
-#include "ResourceValues.h"
+#include <ResourceValues.h>
 #include "util/Util.h"
-#include "ValueVisitor.h"
+#include <ValueVisitor.h>
 #include "test/Builders.h"
 
 namespace aapt {

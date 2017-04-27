@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
-#include "Source.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
+#include <Source.h>
+#include <ValueVisitor.h>
 #include "unflatten/BinaryResourceParser.h"
 #include "unflatten/ResChunkPullParser.h"
 #include "util/Util.h"

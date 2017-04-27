@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "Diagnostics.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <Diagnostics.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "util/Util.h"
 
 #include "test/Builders.h"

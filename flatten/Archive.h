@@ -17,7 +17,7 @@
 #ifndef AAPT_FLATTEN_ARCHIVE_H
 #define AAPT_FLATTEN_ARCHIVE_H
 
-#include "Diagnostics.h"
+#include <Diagnostics.h>
 #include "util/BigBuffer.h"
 #include "util/Files.h"
 #include "util/StringPiece.h"

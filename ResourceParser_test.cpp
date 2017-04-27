@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "ResourceParser.h"
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
+#include <ResourceParser.h>
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
 #include "test/Context.h"
 #include "xml/XmlPullParser.h"
 

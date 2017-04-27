@@ -17,7 +17,7 @@
 #ifndef AAPT_JAVA_MANIFESTCLASSGENERATOR_H
 #define AAPT_JAVA_MANIFESTCLASSGENERATOR_H
 
-#include "Diagnostics.h"
+#include <Diagnostics.h>
 #include "java/ClassDefinition.h"
 #include "util/StringPiece.h"
 #include "xml/XmlDom.h"

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "ConfigDescription.h"
-#include "ResourceTable.h"
-#include "SdkConstants.h"
-#include "ValueVisitor.h"
+#include <ConfigDescription.h>
+#include <ResourceTable.h>
+#include <SdkConstants.h>
+#include <ValueVisitor.h>
 #include "link/Linkers.h"
 
 #include <algorithm>

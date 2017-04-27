@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "Diagnostics.h"
-#include "ResourceUtils.h"
-#include "SdkConstants.h"
+#include <Diagnostics.h>
+#include <ResourceUtils.h>
+#include <SdkConstants.h>
 #include "link/Linkers.h"
 #include "link/ReferenceLinker.h"
 #include "process/IResourceTableConsumer.h"

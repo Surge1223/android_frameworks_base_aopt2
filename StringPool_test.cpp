@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "StringPool.h"
+#include <StringPool.h>
 #include "util/Util.h"
 
 #include <gtest/gtest.h>

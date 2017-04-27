@@ -17,7 +17,7 @@
 #ifndef AAPT_IO_FILE_H
 #define AAPT_IO_FILE_H
 
-#include "Source.h"
+#include <Source.h>
 #include "io/Data.h"
 
 #include <memory>

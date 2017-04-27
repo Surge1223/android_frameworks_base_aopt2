@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "SdkConstants.h"
+#include <SdkConstants.h>
 #include "flatten/ChunkWriter.h"
 #include "flatten/ResourceTypeExtensions.h"
 #include "flatten/XmlFlattener.h"

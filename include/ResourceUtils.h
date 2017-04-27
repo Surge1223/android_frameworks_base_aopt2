@@ -17,9 +17,9 @@
 #ifndef AAPT_RESOURCEUTILS_H
 #define AAPT_RESOURCEUTILS_H
 
-#include "NameMangler.h"
-#include "Resource.h"
-#include "ResourceValues.h"
+#include <NameMangler.h>
+#include <Resource.h>
+#include <ResourceValues.h>
 #include "util/StringPiece.h"
 
 #include <functional>

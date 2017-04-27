@@ -17,10 +17,10 @@
 #ifndef AAPT_PROTO_PROTOHELPERS_H
 #define AAPT_PROTO_PROTOHELPERS_H
 
-#include "ConfigDescription.h"
-#include "ResourceTable.h"
-#include "Source.h"
-#include "StringPool.h"
+#include <ConfigDescription.h>
+#include <ResourceTable.h>
+#include <Source.h>
+#include <StringPool.h>
 
 #include "Format.pb.h"
 

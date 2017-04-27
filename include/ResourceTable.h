@@ -17,12 +17,12 @@
 #ifndef AAPT_RESOURCE_TABLE_H
 #define AAPT_RESOURCE_TABLE_H
 
-#include "ConfigDescription.h"
-#include "Diagnostics.h"
-#include "Resource.h"
-#include "ResourceValues.h"
-#include "Source.h"
-#include "StringPool.h"
+#include <ConfigDescription.h>
+#include <Diagnostics.h>
+#include <Resource.h>
+#include <ResourceValues.h>
+#include <Source.h>
+#include <StringPool.h>
 #include "io/File.h"
 
 #include <android-base/macros.h>

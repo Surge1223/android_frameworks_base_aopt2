@@ -125,11 +125,11 @@ protoIncludes := \
 aopt_staticlibs := \
     libandroidfw-static \
     libpng \
-    liblog \
     libexpat_static \
     libutils \
     libcutils \
     libziparchive \
+    liblog \
     libbase \
     libm \
     libc \
@@ -157,24 +157,24 @@ CFLAGS := \
 	-D_BYPASS_DSO_ERROR \
 	-DHAVE_ERRNO_H='1' \
 	-DSTATIC_ANDROIDFW_FOR_TOOLS \
-	
-aopt_cflags += -D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARIANT)"' 
+
+aopt_cflags += -D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARIANT)"'
 aopt_cflags += -Wno-format-y2k
 aopt_cflags += $(CFLAGS)
 
-aopt_ldlibs := -lm -lc -lgcc -ldl -lz 
+aopt_ldlibs := -lm -lc -lgcc -ldl -lz
 
 aopt_cflags += \
 	-Wno-unused-variable \
 	-Wno-unused-parameter \
 	-Wno-maybe-uninitialized
-	
+
 aopt_cxxflags := \
 	-std=gnu++1y \
 	-Wno-missing-field-initializers \
 	-fno-exceptions \
 	-fno-rtti \
-	-Wno-missing-field-initializers 
+	-Wno-missing-field-initializers
 
 aopt_includes := \
         $(LOCAL_PATH)/include \
@@ -190,21 +190,21 @@ aopt_includes := \
         frameworks/base/libs/androidfw \
         frameworks/base/include/androidfw \
         external/protobuf/src \
-        external/protobuf/android 
-        
-hostLdLibs := -lm -lc -lgcc -ldl -lz 
+        external/protobuf/android
+
+hostLdLibs := -lm -lc -lgcc -ldl -lz
 
 hostStaticLibs := \
-	libandroidfw \
+    libandroidfw \
     libpng \
-    liblog \
     libexpat \
     libutils \
     libcutils \
     libziparchive-host \
+    liblog \
     libbase \
-	libprotobuf-cpp-lite_static
-	
+    libprotobuf-cpp-lite_static
+
 
 cFlags := \
 	-Wall \
@@ -235,7 +235,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libprotobuf-cpp-lite_arm
 IGNORED_WARNINGS := -Wno-sign-compare -Wno-unused-parameter -Wno-sign-promo -Wno-error=return-type
 LOCAL_CPP_EXTENSION := .cc
-DIR := ../../../../external/protobuf
+DIR := ../../external/protobuf
+#DIR := $(PROTODIR)
+#LOCAL_PATH := $(PROTODIR)
 CC_LITE_SRC_FILES := \
 	$(DIR)/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc \
 	$(DIR)/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc \
@@ -252,26 +254,30 @@ CC_LITE_SRC_FILES := \
 	$(DIR)/src/google/protobuf/io/zero_copy_stream_impl_lite.cc
 
 LOCAL_C_INCLUDES := \
-	$(DIR)/android \
+    $(DIR)/android \
     $(DIR)/src \
     $(aopt_includes) \
     $(DIR)
 
-LOCAL_CPPFLAGS := $(aopt_cxxflags)    
+LOCAL_CPPFLAGS := $(aopt_cxxflags)
 LOCAL_CFLAGS := -DGOOGLE_PROTOBUF_NO_RTTI $(IGNORED_WARNINGS) $(aopt_cxxflags)
 LOCAL_SRC_FILES := $(CC_LITE_SRC_FILES)
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	$(DIR)/android \
+    $(DIR)/android \
     $(DIR)/src \
     $(DIR)
-    
+
 include $(BUILD_STATIC_LIBRARY)
+
+#if 0
+# =======================================================
+#
 # Android Protocol buffer compiler, aprotoc (target executable)
 # used by the build systems as $(PROTOC) defined in
 # build/core/config.mk
 #
 # Note: this isnt needed anymore since making the temp files
-# 		I included it for historical reasons 
+# 		I included it for historical reasons
 # =======================================================
 include $(CLEAR_VARS)
 
@@ -373,33 +379,33 @@ COMPILER_SRC_FILES :=  \
     $(DIR)/src/google/protobuf/stubs/strutil.cc \
     $(DIR)/src/google/protobuf/stubs/substitute.cc \
     $(DIR)/src/google/protobuf/stubs/stringprintf.cc
-    
-LOCAL_MODULE_STEM_32 := aprotoc        
+
+LOCAL_MODULE_STEM_32 := aprotoc
 LOCAL_MODULE_STEM_64 := aprotoc64
 LOCAL_MULTILIB := both
 LOCAL_SRC_FILES := $(COMPILER_SRC_FILES)
 
 LOCAL_C_INCLUDES := \
-	$(DIR)/android \
+    $(DIR)/android \
     $(DIR)/src \
     $(aopt_includes) \
     $(DIR)
 
-LOCAL_CPPFLAGS := -std=gnu++1y -frtti 
-LOCAL_CFLAGS := $(IGNORED_WARNINGS) 
+LOCAL_CPPFLAGS := -std=gnu++1y -frtti
+LOCAL_CFLAGS := $(IGNORED_WARNINGS)
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	$(DIR)/android \
+    $(DIR)/android \
     $(DIR)/src \
     $(aopt_includes) \
     $(DIR)
-    
+
 LOCAL_STATIC_LIBRARIES :=  $(aopt_staticlibs)
 LOCAL_CFLAGS := $(IGNORED_WARNINGS)
 LOCAL_LDFLAGS += -static
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_PACK_MODULE_RELOCATIONS := false
 include $(BUILD_EXECUTABLE)
-
+#endif
 
 # C++ lite static library for host tools.
 # =======================================================
@@ -422,7 +428,7 @@ LOCAL_CFLAGS := -D'AOPT_VERSION="android-$(PLATFORM_VERSION)-$(TARGET_BUILD_VARI
 LOCAL_C_INCLUDES := \
 	$(aopt_includes) \
 	$(protoIncludes)
-	
+
 LOCAL_SRC_FILES := $(sources)
 include $(BUILD_STATIC_LIBRARY)
 
@@ -451,8 +457,8 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 # Disable multilib build for now new build system makes it difficult
 # I can switch to one or the other but creating and using an intermediates-dir
 # thats arch specific is not working, using the same  method as debuggered and linker
-# also fails 
-# 
+# also fails
+#
 
 LOCAL_SRC_FILES := $(main) $(toolSources)
 LOCAL_MODULE_STEM_32 := aopt2

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "NameMangler.h"
-#include "Resource.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <NameMangler.h>
+#include <Resource.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 
 #include "java/AnnotationProcessor.h"
 #include "java/ClassDefinition.h"

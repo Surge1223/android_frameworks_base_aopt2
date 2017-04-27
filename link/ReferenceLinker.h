@@ -17,9 +17,9 @@
 #ifndef AAPT_LINKER_REFERENCELINKER_H
 #define AAPT_LINKER_REFERENCELINKER_H
 
-#include "Resource.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <Resource.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "link/Linkers.h"
 #include "process/IResourceTableConsumer.h"
 #include "process/SymbolTable.h"

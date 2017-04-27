@@ -16,7 +16,7 @@
 
 #include <gtest/gtest.h>
 
-#include "Resource.h"
+#include <Resource.h>
 
 namespace aapt {
 

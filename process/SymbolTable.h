@@ -17,9 +17,9 @@
 #ifndef AAPT_PROCESS_SYMBOLTABLE_H
 #define AAPT_PROCESS_SYMBOLTABLE_H
 
-#include "Resource.h"
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <Resource.h>
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "util/Util.h"
 
 #include <utils/JenkinsHash.h>

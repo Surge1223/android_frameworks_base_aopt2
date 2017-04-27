@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "Debug.h"
-#include "Diagnostics.h"
-#include "Flags.h"
+#include <Debug.h>
+#include <Diagnostics.h>
+#include <Flags.h>
 #include "io/ZipArchive.h"
 #include "process/IResourceTableConsumer.h"
 #include "proto/ProtoSerialize.h"

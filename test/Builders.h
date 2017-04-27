@@ -17,8 +17,8 @@
 #ifndef AAPT_TEST_BUILDERS_H
 #define AAPT_TEST_BUILDERS_H
 
-#include "ResourceTable.h"
-#include "ResourceValues.h"
+#include <ResourceTable.h>
+#include <ResourceValues.h>
 #include "test/Common.h"
 #include "util/Util.h"
 #include "xml/XmlDom.h"

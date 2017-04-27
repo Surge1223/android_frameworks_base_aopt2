@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "ResourceParser.h"
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ResourceParser.h>
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "util/ImmutableMap.h"
 #include "util/Util.h"
 #include "xml/XmlPullParser.h"

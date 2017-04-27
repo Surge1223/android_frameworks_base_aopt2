@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "Resource.h"
+#include <Resource.h>
 #include "util/StringPiece.h"
 
 #include <map>

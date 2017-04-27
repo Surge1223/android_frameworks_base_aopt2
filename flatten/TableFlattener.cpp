@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 
 #include "flatten/ChunkWriter.h"
 #include "flatten/ResourceTypeExtensions.h"

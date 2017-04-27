@@ -17,9 +17,9 @@
 #ifndef AAPT_FILES_H
 #define AAPT_FILES_H
 
-#include "Diagnostics.h"
+#include <Diagnostics.h>
 #include "Maybe.h"
-#include "Source.h"
+#include <Source.h>
 
 #include "util/StringPiece.h"
 

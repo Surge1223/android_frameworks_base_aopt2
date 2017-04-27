@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
-#include "ValueVisitor.h"
+#include <ResourceTable.h>
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
+#include <ValueVisitor.h>
 #include "link/TableMerger.h"
 #include "util/Util.h"
 

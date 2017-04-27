@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "ResourceTable.h"
+#include <ResourceTable.h>
 
 #include "compile/IdAssigner.h"
 #include "process/IResourceTableConsumer.h"

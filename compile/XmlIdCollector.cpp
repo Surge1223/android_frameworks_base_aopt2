@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include "ResourceUtils.h"
-#include "ResourceValues.h"
+#include <ResourceUtils.h>
+#include <ResourceValues.h>
 #include "compile/XmlIdCollector.h"
 #include "xml/XmlDom.h"
 
